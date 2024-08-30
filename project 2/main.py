@@ -1,3 +1,5 @@
+# Guess the number game
+
 import random
 
 n = random.randint(1,100)
