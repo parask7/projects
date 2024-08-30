@@ -1,3 +1,5 @@
+# Rock Paper Seccior game
+
 import random
 
 computer = random.choice([-1, 0, 1])
