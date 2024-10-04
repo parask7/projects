@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Drive Clone</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+        }
+
+        header {
+            background-color: #f2f2f2;
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 20px;
+            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .logo h1 {
+            font-size: 24px;
+            color: #4CAF50;
+        }
+
+        .search-bar input {
+            padding: 8px;
+            width: 300px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        .header-icons span {
+            margin-left: 20px;
+            font-size: 20px;
+        }
+
+        .container {
+            display: flex;
+            flex: 1;
+            background-color: #ffffff; /* Main background color */
+        }
+
+        .addfile {
+            display: flex;
+            align-items: center;
+            padding: 10px;
+        }
+
+        .addfile button {
+            background-color: #4CAF50;
+            height: 50px;
+            width: 100px;
+            border: none;
+            color: white;
+            cursor: pointer;
+            border-radius: 4px;
+            margin-bottom: 20px;
+        }
+        .sidebar {
+            width: 220px; /* Slightly wider sidebar */
+            background-color: #f7f7f7;
+            padding: 20px;
+            box-shadow: 2px 0px 5px rgba(0, 0, 0, 0.1);
+            border-right: 1px solid #ddd; /* Add border to right for better separation */
+        }
+
+        .sidebar ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .sidebar ul li {
+            padding: 12px 0;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.2s ease; /* Smooth transition */
+            display: flex; /* Use flex for better alignment */
+            align-items: center; /* Center icons with text */
+        }
+
+        .sidebar ul li:hover {
+            background-color: #e0e0e0;
+            border-radius: 5px;
+            padding-left: 10px;
+        }
+
+        .file-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+            gap: 15px;
+            padding: 15px;
+            flex: 1;
+            background-color: #fff;
+            overflow-y: auto;
+        }
+
+        .file-item {
+            height: 80px;
+            padding: 10px;
+            background-color: #f2f2f2;
+            text-align: center;
+            border-radius: 8px;
+            cursor: pointer;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: background-color 0.2s ease; /* Smooth transition */
+        }
+
+        .file-item:hover {
+            background-color: #e0f7e0;
+        }
+
+        .sidebar-content {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            padding: 10px;
+        }
+
+        .sidebar-content ul {
+            margin: 0;
+        }
+
+        .sidebar-content ul li img {
+            margin-right: 8px; /* Space between icon and text */
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo">
+            <h1>My Drive</h1>
+        </div>
+        <div class="search-bar">
+            <input type="text" placeholder="Search in Drive">
+        </div>
+        <div class="header-icons">
+            <span>⚙️</span>
+            <span>🔔</span>
+            <span>👤</span>
+        </div>
+    </header>
+
+    <!-- Sidebar for navigation -->
+    <div class="container">
+        <aside class="sidebar">
+            <div class="addfile">
+                <button>New</button>
+            </div>
+            <div class="sidebar-content">
+                <ul>
+                    <li>📁 My Drive</li>
+                    <li>🕑 Recent</li>
+                    <li>⭐ Starred</li>
+                    <li>🗑️ Trash</li>
+                </ul>
+            </div>
+        </aside>
+
+        <!-- Main content area where files are displayed -->
+        <main class="file-grid">
+            <div class="file-item">📄 File 1</div>
+            <div class="file-item">📄 File 2</div>
+            <div class="file-item">📄 File 3</div>
+            <div class="file-item">📄 File 4</div>
+            <div class="file-item">📄 File 5</div>
+            <div class="file-item">📄 File 6</div>
+            <div class="file-item">📄 File 7</div>
+            <div class="file-item">📄 File 8</div>
+        </main>
+    </div>
+</body>
+</html>
