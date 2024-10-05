@@ -46,9 +46,9 @@ function updateDashboard() {
             <td>${file.size} MB</td>
             <td>${file.dateUploaded}</td>
             <td>
-                <button onclick="viewFile(${index})">View</button>
+                <button class="view-btn" onclick="viewFile(${index})">View</button>
                 <a href="${file.url}" download="${file.name}">
-                    <button>Download</button>
+                    <button class="download-btn">Download</button>
                 </a>
                 <button class="delete-btn" onclick="deleteFile(${index})">Delete</button>
             </td>
@@ -56,6 +56,13 @@ function updateDashboard() {
 
         tbody.appendChild(row);
     });
+
+    const fileTable = document.getElementById('fileTable');
+    if (filesList.length > 0) {
+        fileTable.classList.add('active');
+    } else {
+        fileTable.classList.remove('active');
+    }
 }
 
 function deleteFile(index) {
