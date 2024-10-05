@@ -3,40 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>File Upload & Management Interface</title>
+    <title>Cloud Storage Dashboard</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="container">
-        <h1>User Dashboard</h1>
 
-        <!-- File Upload Section -->
+    <div class="container">
+        <h1>Cloud Storage Dashboard</h1>
+
+        <!-- Upload Section -->
         <div class="upload-section">
-            <h2>Upload Files</h2>
             <input type="file" id="fileInput" multiple>
-            <button onclick="uploadFiles()">Upload</button>
+            <button id="uploadBtn" onclick="uploadFiles()">Upload Files</button>
         </div>
 
-        <!-- User Dashboard Section -->
-        <div class="dashboard">
-            <h2>Your Files</h2>
+        <!-- Storage Info -->
+        <div class="storage-info">
             <p>Total Storage Used: <span id="totalStorage">0 MB</span></p>
+        </div>
+
+        <!-- Dashboard Table -->
+        <div class="dashboard">
             <table id="fileTable">
                 <thead>
                     <tr>
                         <th>File Name</th>
-                        <th>File Size</th>
+                        <th>Size</th>
                         <th>Date Uploaded</th>
                         <th>Actions</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <!-- Dynamic Content Here -->
+                    <!-- Files will be dynamically added here -->
                 </tbody>
             </table>
         </div>
     </div>
 
     <script src="script.js"></script>
+
 </body>
 </html>
